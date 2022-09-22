@@ -25,12 +25,21 @@ void SetKey(BOOL bState, DWORD key) {
     }
 }
 
+int setDelay(){
+    int delay;
+    cout << "Enter delay: ";
+    cin >> delay;
+    return delay;
+}
+
+
 int main() {
     int a = 1;
-    while (a = 1) {
+    int delay = setDelay();
+    while (a = 1 && delay > 0)  {
         SetKey(TRUE, VK_CAPITAL);
-        Sleep(500);
+        Sleep(delay);
         SetKey(FALSE, VK_CAPITAL);
-        Sleep(500);
+        Sleep(delay);
     }
 }
